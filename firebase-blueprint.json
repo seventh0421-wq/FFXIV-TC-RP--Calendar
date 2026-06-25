@@ -1,0 +1,29 @@
+{
+  "collections": {
+    "events": {
+      "schema": {
+        "title": "string",
+        "date": "string",
+        "startTime": "string",
+        "endTime": "string",
+        "dc": "string",
+        "world": "string",
+        "category": "string",
+        "host": "string",
+        "dressCode": "string",
+        "description": "string",
+        "tags": "array",
+        "bannerGradient": "string",
+        "discordUrl": "string|null",
+        "recruitmentText": "string|null",
+        "isCustom": "boolean",
+        "location": {
+          "housingArea": "string",
+          "ward": "number",
+          "plot": "number",
+          "roomNumber": "string|null"
+        }
+      }
+    }
+  }
+}

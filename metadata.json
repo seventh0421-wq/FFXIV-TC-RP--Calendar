@@ -1,0 +1,6 @@
+{
+  "name": "FFXIV TC RP活動行事曆",
+  "description": "專為《最終幻想14》繁體中文社群設計的 RP (Roleplay) 活動行事曆，提供類似 Google 日曆的月視圖、週視圖和議程視圖，支援活動篩選、發布與本地儲存系統。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

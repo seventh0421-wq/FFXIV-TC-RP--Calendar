@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&family=Zen+Maru+Gothic:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;650&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/chiron-goround-hk/index.css');
+@import "tailwindcss";
+
+:root {
+  --primary: #DFB15B;
+  --primary-light: #FBF1C7;
+  --primary-dark: #B5892C;
+  --bg-dark: #0C0C0E;
+  --bg-panel: #16161B;
+  --bg-sidebar: #101012;
+  --bg-border: #2D271E;
+}
+
+/* Palette 0: Charcoal Black & Luxurious Gold (極致曜黑金) */
+html.theme-black-gold, .theme-black-gold {
+  --primary: #DFB15B;
+  --primary-light: #FBF1C7;
+  --primary-dark: #B5892C;
+  --bg-dark: #0C0C0E;
+  --bg-panel: #16161B;
+  --bg-sidebar: #101012;
+  --bg-border: #2D271E;
+}
+
+/* Palette 1: Deep Ocean & Crimson Red (深海緋紅) */
+html.theme-ocean-crimson, .theme-ocean-crimson {
+  --primary: #CC2936;
+  --primary-light: #EBBAB9;
+  --primary-dark: #8c1c24;
+  --bg-dark: #051a26;
+  --bg-panel: #0a2d42;
+  --bg-sidebar: #061e2b;
+  --bg-border: #144969;
+}
+
+/* Palette 2: Cozy Sage & Terracotta (鼠尾草赤陶) */
+html.theme-sage-terracotta, .theme-sage-terracotta {
+  --primary: #F19C79;
+  --primary-light: #F6F4D2;
+  --primary-dark: #A44A3F;
+  --bg-dark: #1b1311;
+  --bg-panel: #261c1a;
+  --bg-sidebar: #1e1514;
+  --bg-border: #442a26;
+}
+
+/* Palette 3: Nocturnal Charcoal & Lavender (闇夜炭紫) */
+html.theme-charcoal-lavender, .theme-charcoal-lavender {
+  --primary: #BFACB5;
+  --primary-light: #E5D0CC;
+  --primary-dark: #444554;
+  --bg-dark: #121818;
+  --bg-panel: #1e2525;
+  --bg-sidebar: #171d1d;
+  --bg-border: #334242;
+}
+
+@theme {
+  --font-sans: "M PLUS Rounded 1c", "Zen Maru Gothic", "Chiron GoRound HK", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Noto Serif TC", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-gold-light: var(--primary-light);
+  --color-gold: var(--primary);
+  --color-gold-dark: var(--primary-dark);
+  --color-dark-bg: var(--bg-dark);
+  --color-panel-bg: var(--bg-panel);
+  --color-sidebar-bg: var(--bg-sidebar);
+  --color-border-dark: var(--bg-border);
+}
+
+/* Headings and major labels use Noto Serif TC (明體) */
+h1, h2, h3, h4, h5, h6,
+.font-display,
+.important-title,
+.modal-title,
+.event-title,
+button {
+  font-family: "Noto Serif TC", serif;
+}
+
+/* Body and UI descriptions use M PLUS Rounded 1c & Zen Maru Gothic (內文使用圓體) */
+body, 
+p, 
+span:not(.important-title), 
+div:not(.important-title):not(.font-display), 
+label, 
+input, 
+textarea,
+select {
+  font-family: "M PLUS Rounded 1c", "Zen Maru Gothic", "Chiron GoRound HK", "Inter", sans-serif;
+}
+
+/* Custom scrollbar utility */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #121214;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--primary) 30%, transparent);
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--primary) 60%, transparent);
+}
+
+/* Modal fade animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.15s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
